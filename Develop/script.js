@@ -16,9 +16,9 @@
 
 // Assignment code here
 
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
+var prompts = document.querySelector("#prompts");
 
 // Write password to the #password input
 function writePassword() {
@@ -26,8 +26,14 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
+}
 
+function showPrompts() {
+  if (document.getElementById("prompts").style.display == "none");
+    document.getElementById("prompts").style.display = "block";
 }
 
 // Add event listener to generate button
+generateBtn.addEventListener("click", showPrompts);
 generateBtn.addEventListener("click", writePassword);
+
