@@ -28,7 +28,20 @@
           <button id="generate" class="btn">Generate Password</button>
         </div>
       </div>
+      <div class="prompts" id="prompts">
+        <legend>Select Character Types & Length</legend>
+          <input type="checkbox" id="lowercase" name="lowercase" />
+            <label for="lowercase">Lowercase</label>
+          <input type="checkbox" id="uppercase" name="uppercase" />
+            <label for="uppercase">Uppercase</label>
+          <input type="checkbox" id="numerals" name="numerals" />
+            <label for="numerals">Numerals</label>
+          <input type="checkbox" id="special-characters" name="special-characters" />
+            <label for="special-characters">Special Characters</label>
+          <input type="number" id="length" name="length" />
+            <label for="length">Password Length</label>
+      </div>
     </div>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
