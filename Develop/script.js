@@ -16,6 +16,12 @@
 
 // Assignment code here
 
+let lowerCase = "abcdefghijklmnopqrstuvwxyz";
+let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let numerals = "0123456789";
+let specialCharacters = "!#$%&^()*-=_./:;<>?@[]{}~`";
+
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 var prompts = document.querySelector("#prompts");
