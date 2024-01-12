@@ -21,21 +21,35 @@ let upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let numerals = "0123456789";
 let specialCharacters = "!#$%&^()*-=_./:;<>?@[]{}~`";
 
+function generatePassword(event) {
+  let lowerCaseBox = document.querySelector("#lowercase");
+  let upperCaseBox = document.querySelector("#uppercase");
+  let numeralsBox = document.querySelector("#numerals");
+  let specialCharactersBox = document.querySelector("#special-characters");
+  let length = document.querySelector("#length").value;
+  if (length < 8 || length > 128 || length == undefined) {
+    window.alert("Password must be between 8 and 128 characters, and at least one character type must be selected.");
+  }
+
+}
+
 
 // Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-var prompts = document.querySelector("#prompts");
+let generateBtn = document.querySelector("#generate");
+let prompts = document.querySelector("#prompts");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let password = generatePassword();
+  let passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
 
-function showPrompts() {
+// Display criteria list when button is clicked.
+function showPrompts(event) {
   if (document.getElementById("prompts").style.display == "none");
+    event.preventDefault();
     document.getElementById("prompts").style.display = "block";
 }
 
